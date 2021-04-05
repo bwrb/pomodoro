@@ -1,0 +1,26 @@
+
+body{
+  font-family: monospace;
+
+}
+#timer{
+    font-size:50px;
+    margin:10px;
+    font-family: monospace;
+}
+#myProgress {
+    margin:10px;
+    width: 50%;
+    background-color: #ddd;
+  }
+  
+  #myBar {
+    width: 0%;
+    height: 20px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 20px;
+  }
+.buttons{
+  margin:10px;
+}
