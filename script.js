@@ -1,6 +1,7 @@
 var seconds = 0;
 var interval;
 pomodoro = (mins) => {
+     var x = document.getElementById("myAudio");
      clearInterval(interval);
      seconds = mins * 60 || 0;
      interval = setInterval(function () {
@@ -16,6 +17,7 @@ pomodoro = (mins) => {
           document.title = minutes.toString().padStart(2, '0') + ':' + sec.toString().padStart(2, '0');
           if (!seconds) {
                clearInterval(interval);
+               x.play();
                alert("🚨 Time to break 😎");
           }
      }, 1000)
