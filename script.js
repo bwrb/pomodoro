@@ -1,6 +1,10 @@
 var seconds = 0;
 var interval;
+
 pomodoro = (mins) => {
+     let now = new Date();
+     localStorage.setItem(Date.now(), mins + " minut " + now)
+     data()
      var x = document.getElementById("myAudio");
      clearInterval(interval);
      seconds = mins * 60 || 0;
@@ -27,3 +31,14 @@ stop = () => {
      seconds = 1;
 }
 
+data = () => {
+     document.getElementById('data').innerHTML = ""
+     ul = document.createElement('ul');
+     document.getElementById('data').appendChild(ul);
+
+     for (let i = 0; i < localStorage.length; i++) {
+          let li = document.createElement('li');
+          ul.appendChild(li);
+          li.innerHTML += localStorage.getItem(localStorage.key(i))
+     }
+}
