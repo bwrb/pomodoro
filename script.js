@@ -22,7 +22,7 @@ pomodoro = (mins) => {
           if (!seconds) {
                clearInterval(interval);
                x.play();
-               alert("🚨 Time to break 😎");
+               var notification = new Notification("🚨 Time to break 😎");
           }
      }, 1000)
 }
@@ -32,6 +32,7 @@ stop = () => {
 }
 
 data = () => {
+     Notification.requestPermission();
      document.getElementById('data').innerHTML = ""
      ul = document.createElement('ul');
      document.getElementById('data').appendChild(ul);
