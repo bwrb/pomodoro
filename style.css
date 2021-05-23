@@ -1,26 +1,36 @@
-
-body{
+body {
   font-family: monospace;
-
 }
-#timer{
-    font-size:50px;
-    margin:10px;
-    font-family: monospace;
+#timer {
+  font-size: 50px;
+  margin: 10px;
 }
 #myProgress {
-    margin:10px;
-    width: 50%;
-    background-color: #ddd;
-  }
-  
-  #myBar {
-    width: 0%;
-    height: 20px;
-    background-color: #4CAF50;
-    text-align: center;
-    line-height: 20px;
-  }
-.buttons{
-  margin:10px;
+  margin: 10px;
+  width: 70%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 0%;
+  height: 20px;
+  background-color: #4caf50;
+  text-align: center;
+  line-height: 20px;
+}
+.buttons {
+  margin: 10px;
+}
+
+#data {
+  margin: 10px;
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
 }

@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timer</title>
-</head>
+  <body onload="data()">
+    <audio id="myAudio">
+      <source src="sound.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <div id="timer">00:00</div>
+    <div id="myProgress">
+      <div id="myBar">0%</div>
+    </div>
+    <div class="buttons">
+      <button id="pomodoro" onclick="pomodoro(25)">25 min</button>
+      <button id="pomodoro" onclick="pomodoro(15)">15 min</button>
+      <button id="pomodoro" onclick="pomodoro(5)">5 min</button>
+      <button id="pomodoro" onclick="stop()">STOP</button>
+    </div>
+    <button id="clear-data" class="buttons" onclick="cleardata()">
+      Clear data
+    </button>
+    <table id="data" class="styled-table"></table>
+  </body>
 
-<body onload="data()">
-  <audio id="myAudio">
-    <source src="sound.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <div id="timer">00:00</div>
-  <div id="myProgress">
-    <div id="myBar">0%</div>
-  </div>
-  <div class="buttons">
-    <button id="pomodoro" onclick="pomodoro(25)">25 min</button>
-    <button id="pomodoro" onclick="pomodoro(15)">15 min</button>
-    <button id="pomodoro" onclick="pomodoro(5)">5 min</button>
-    <button id="pomodoro" onclick="stop()">STOP</button>
-  </div>
-  <div id="data"></div>
-</body>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </html>
