@@ -12,7 +12,7 @@ pomodoro = (mins) => {
     })
   );
   data();
-  var x = document.getElementById("myAudio");
+  // var x = document.getElementById("myAudio");
   clearInterval(interval);
   seconds = mins * 60 || 0;
   interval = setInterval(function () {
@@ -34,7 +34,7 @@ pomodoro = (mins) => {
       sec.toString().padStart(2, "0");
     if (!seconds) {
       clearInterval(interval);
-      x.play();
+      // x.play();
       var notification = new Notification("🚨 Time to break 😎");
     }
   }, 1000);
@@ -47,7 +47,7 @@ stop = () => {
 data = () => {
   Notification.requestPermission();
   document.getElementById("data").innerHTML =
-    "<tr><th>Interval</th><th>Date</th> <th>Time</th></tr>";
+    "<thead><tr><th>Interval</th><th>Date</th> <th>Time</th></tr></thead>";
   for (let i = 0; i < localStorage.length; i++) {
     tr = document.createElement("tr");
     document.getElementById("data").appendChild(tr);
