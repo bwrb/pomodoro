@@ -47,7 +47,7 @@ stop = () => {
 data = () => {
   Notification.requestPermission();
   document.getElementById("data").innerHTML =
-    "<thead><tr><th>Interval</th><th>Date</th> <th>Time</th></tr></thead>";
+    '<thead><tr><th>Interval</th><th scope="col">Date</th> <th>Time</th></tr></thead>';
   for (let i = 0; i < localStorage.length; i++) {
     tr = document.createElement("tr");
     document.getElementById("data").appendChild(tr);
