@@ -1,3 +1,3 @@
 # pomodoro
 
-https://bartlomiejwierzbicki.github.io/pomodoro
+https://bwrb.github.io/pomodoro
